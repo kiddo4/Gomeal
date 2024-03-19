@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/src/core/constants/gaps.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,9 +35,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w500
                     ),
                     ),
-              trailing: Icon(Icons.notifications),
+              trailing: Icon(
+                Icons.notifications,
+                color: Colors.blue,
+                ),
             ),
           ),
+          gapH12,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 200.h,
+              width: double.infinity,
+                  
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: 
+                  ),
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              
+              ),
+          ),
+             
+          
         ],
       ),
     );
