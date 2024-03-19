@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/src/features/Marketplace/pages/Home/Screens/Home_screen.dart';
 import 'package:myapp/src/features/bottomNavBar/bottom_nav.dart';
 
@@ -26,15 +27,30 @@ class _NavBarState extends State<NavBar> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
+          height: 60.h,
           decoration: BoxDecoration(
             color: Colors.grey,
             borderRadius: BorderRadius.circular(20),
             
         ),
-        child: BottomNav(
-          icon: Icon(Icons.home_mini_rounded),
-          index: 0,
-          onTap: (() => changePage(0)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+
+            BottomNav(
+              icon: Icon(
+                Icons.home_rounded,
+                
+                ),
+              index: 0,
+              onTap: (() => changePage(0)),
+            ),
+            BottomNav(
+              icon: Icon(Icons.search_rounded),
+              index: 0,
+              onTap: (() => changePage(0)),
+            ),
+          ],
         ),
         ),
       ),

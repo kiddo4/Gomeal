@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/src/features/Marketplace/pages/Home/Screens/Home_screen.dart';
+import 'package:myapp/src/features/bottomNavBar/nav_bar.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(milliseconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()));
+        MaterialPageRoute(builder: (context) => const NavBar()));
     });
   }
   @override
