@@ -17,11 +17,7 @@ class BottomNav extends StatelessWidget {
   ) {
     return GestureDetector(
       onTap: onTap,
-      child: Icon(
-        icon,
-        
-       
-      ),
+      child: icon
     );
   }
 }

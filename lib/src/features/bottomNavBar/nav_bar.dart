@@ -32,17 +32,12 @@ class _NavBarState extends State<NavBar> {
             
         ),
         child: BottomNav(
-          image: image,
+          icon: Icon(Icons.home_mini_rounded),
           index: 0,
           onTap: (() => changePage(0)),
         ),
         ),
       ),
-    );
-  }
-}(0)),
-        ),
-    )
     );
   }
 }
