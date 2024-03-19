@@ -118,20 +118,22 @@ class _HomeScreenState extends State<HomeScreen> {
                            
                             ),
                        ),
-                      // ListView.builder(
-                      //   itemCount: meals.length,
-                      //   scrollDirection: Axis.horizontal,
-                      //   shrinkWrap: true,
-                      //   itemBuilder: (context, index) {
-                      //   final meal = meals[index]; // Retrieve the MealModel instance for the current index
-                      //   return MealItem(
-                      //     mealName: meal.mealName,
-                      //     imageUrl: meal.image,
-                      //     sellerName: meal.mealSeller, // Pass the MealModel instance to the MealItem widget
-                      //   );
-                      //   },
-                      //   )
-
+                       SizedBox(
+                        height: 100.h,
+                         child: ListView.builder(
+                          itemCount: meals.length,
+                          scrollDirection: Axis.horizontal,
+                          // shrinkWrap: true,
+                          itemBuilder: (context, index) {
+                          final meal = meals[index]; // Retrieve the MealModel instance for the current index
+                          return MealItem(
+                            mealName: meal.mealName,
+                            imageUrl: meal.image,
+                            sellerName: meal.mealSeller, // Pass the MealModel instance to the MealItem widget
+                          );
+                          },
+                          ),
+                       ),
             ],
           ),
         ),

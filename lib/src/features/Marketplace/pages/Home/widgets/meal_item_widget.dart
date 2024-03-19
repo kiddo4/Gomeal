@@ -19,8 +19,8 @@ class MealItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 100.h,
-        width: 100.h,
+        
+        width: 150,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(imageUrl),
@@ -41,20 +41,20 @@ class MealItem extends StatelessWidget {
                   Text(
                     mealName,
                     style: GoogleFonts.poppins(
-                      fontSize: 30,
+                      fontSize: 10,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 95.h),
+              // SizedBox(height: 95.h),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Text(
                   sellerName,
                   style: GoogleFonts.poppins(
-                    fontSize: 20,
+                    fontSize: 10,
                     color: Colors.white,
                     fontWeight: FontWeight.w600,
                   ),
