@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/src/core/constants/gaps.dart';
+import 'package:myapp/src/features/Marketplace/pages/Home/widgets/meal_item_widget.dart';
+import 'package:myapp/src/features/Marketplace/pages/Home/models/meal_item_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -110,14 +112,20 @@ class _HomeScreenState extends State<HomeScreen> {
                      Align(
                       alignment: Alignment.topLeft,
                        child: Text(
-                          ' For you🔥 ',
+                          ' For you ',
                           style: GoogleFonts.poppins(
-                            fontSize: 30,
+                            fontSize: 40,
                             fontWeight: FontWeight.bold
                           ),
                          
                           ),
                      ),
+                     ListView.builder(
+                      itemCount: dummyData.lenght,
+                      itemBuilder: ((context, index) {
+                        return MealItem();
+                      })
+                      )
                   ],
                 ),
               ),
