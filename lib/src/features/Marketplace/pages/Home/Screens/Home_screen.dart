@@ -34,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w500
                     ),
                     ),
+              trailing: Icon(Icons.notifications),
             ),
           ),
         ],
