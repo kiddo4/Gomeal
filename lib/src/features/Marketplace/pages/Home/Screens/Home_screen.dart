@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              leading: CircleAvatar(),
+              leading: const CircleAvatar(),
               title: Text(
                     'Welcome back 👋 ',
                     style: GoogleFonts.poppins(
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w500
                     ),
                     ),
-              trailing: Icon(
+              trailing: const Icon(
                 Icons.notifications,
                 color: Colors.blue,
                 ),
@@ -43,16 +44,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           gapH12,
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: Container(
               height: 200.h,
               width: double.infinity,
                   
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: 
+                image: const DecorationImage(
+                  image: NetworkImage(
+                    'https://www.chicken-republic.com/wp-content/uploads/2021/10/CITIZENS-SPICY-YAM-MEAL-DARK.jpg'),
+                    fit: BoxFit.fill
+                  
                   ),
-                color: Colors.blue,
+                
                 borderRadius: BorderRadius.circular(20)
               ),
               
