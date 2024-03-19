@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,12 +7,16 @@ class MealItem extends StatelessWidget {
   final String imageUrl;
   final String mealName;
   final String sellerName;
+  final String sellerImage;
+  final String price;
 
   const MealItem({
     Key? key,
     required this.imageUrl,
     required this.mealName,
     required this.sellerName,
+    required this.sellerImage,
+    required this.price,
   }) : super(key: key);
 
   @override
@@ -20,7 +25,7 @@ class MealItem extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         
-        width: 150,
+        width: 190.w,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(imageUrl),
@@ -41,25 +46,35 @@ class MealItem extends StatelessWidget {
                   Text(
                     mealName,
                     style: GoogleFonts.poppins(
-                      fontSize: 10,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-              // SizedBox(height: 95.h),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Text(
-                  sellerName,
-                  style: GoogleFonts.poppins(
-                    fontSize: 10,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  textAlign: TextAlign.end,
-                ),
+              SizedBox(height: 100.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  
+                     Text(
+                     '₦ $price',
+                      style: GoogleFonts.poppins(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      
+                    ),
+
+              CircleAvatar(
+                backgroundImage: CachedNetworkImageProvider(sellerImage),
+                radius: 18,
+              )
+            
+                 
+                ],
               ),
             ],
           ),
