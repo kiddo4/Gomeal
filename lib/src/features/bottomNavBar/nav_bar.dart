@@ -29,7 +29,7 @@ class _NavBarState extends State<NavBar> {
         child: Container(
           height: 60.h,
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Colors.grey[300],
             borderRadius: BorderRadius.circular(20),
             
         ),
@@ -40,13 +40,20 @@ class _NavBarState extends State<NavBar> {
             BottomNav(
               icon: Icon(
                 Icons.home_rounded,
-                
+                color: pageIndex == 0
+                      ? Colors.blue : Colors.black,
+                size: 40,
                 ),
               index: 0,
               onTap: (() => changePage(0)),
             ),
             BottomNav(
-              icon: Icon(Icons.search_rounded),
+              icon: Icon(
+                Icons.search_off_rounded,
+                color: pageIndex == 1
+                      ? Colors.blue : Colors.black,
+                size: 40,
+                ),
               index: 0,
               onTap: (() => changePage(0)),
             ),
